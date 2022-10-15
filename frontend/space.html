@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Smiley - Free Space</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+<body class="pt-2">
+  <nav class="fixed-top border-bottom border-1 border-info bg-white">
+    <div class="container-fluid">
+      <div class="row text-info">
+
+        <div class="col-5 text-center d-flex justify-content-center align-items-center">
+          <i class="fa-regular fa-face-laugh-wink fs-2"> <span class="fs-4 fw-semibold text-capitalize">Smiley Space</span></i>
+        </div>
+        <div class="col-1 d-flex justify-content-end align-items-center">
+        </div>
+        <div class="col-5 text-center d-flex justify-content-center align-items-center">
+          <input class="form-control mx-1 handle-input w-50" type="search" placeholder="Search">
+          <a href="space.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-end-0 border-0 "><i class="fa-solid mx-2 fa-comments"></i>Space</button></a><a href="profile.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-end-0 border-0 "><i class="fa-solid mx-2 fa-user"></i>Profile</button></a><a href="settings.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-0"><i class="fa-solid mx-2 fa-gears"></i>Settings</button></a><a><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-0" id="logoutBtn">Log out</button></a>      
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section id="" class=" my-sm-3 my-lg-4">
+    <div class="container-lg ">
+      <div class="row d-flex justify-content-center">
+
+        <aside class="col-sm-10 col-lg-3 p-0">
+          <div class="bg-white rounded-5 border m-0 pb-5 mt-5 bg-warning">
+            <div class="container-fluid p-0 ">
+              <div class="row">
+
+                <div class="col-12 px-4">
+                  <div class="row">
+                    <div class="col-4 mt-4">
+                      <img src="images/profile_pic.png" alt="" class="w-100">      
+                    </div>
+    
+                    <div class="col-8 mt-5 fs-5 fw-semibold text-capitalize d-flex justify-content-start align-items-center"><span id="profileUserName" class="border-bottom border-info border-2">user name</span></div>
+    
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="mt-lg-5 m-0 p-2 bg-info text-start text-white text-capitalize fw-semibold "><i class="fa-solid fa-list-ul mx-2"></i>members list</div>
+                </div>
+                <div class="col-12">
+                  <div id="usersContainer" class="bg-white text-center pt-1 rounded-0">
+                    <!-- fill users list  -->
+                  </div>
+                </div>
+              </div>   
+            </div>
+            <div class="border border-2 border-bottom-0 border-start-0 border-end-0 border-info my-3 px-5"></div>
+
+          </div>
+          
+        </aside>
+
+        <article class="col-sm-9 col-lg-7 px-4">
+
+          <section id="writingPostSection" class="">
+            <div class="bg-info p-4 pt-5 rounded-5">
+              <h5 class="mb-3 text-white">Share your ideas now...</h5>
+              <div>
+                  <div class="w-100 my-2">
+                      <input id="postTitleInput" type="text" class="form-control handle-input px-4 py-2 border-0 add-post-top bg-light" placeholder="Title of post...">
+                      <textarea id="postContentInput" class="form-control handle-input px-4 py-2 border-0 add-post-bottom bg-light" rows="2" placeholder="content..."></textarea>
+                  </div>
+              </div>
+              <div class="bg-info px-3 d-flex align-items-center">
+                  <button id="addPostBtn" type="button" class="btn btn-info mx-1 px-3"><i class="fa-solid fa-feather"></i> Post</button>
+                  <button id="editPostBtn" type="button" class="btn btn-info mx-1 px-3 d-none"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                  <button id="resetPostInputsBtn" type="button" class="btn btn-info mx-1 px-3"><i class="fa-solid fa-eraser"></i> Reset</button>
+
+                  <span id="addingPostAlert" class="mx-auto text-white d-none"></span>
+              </div>
+            </div>
+          </section>
+
+          <div id="spaceHeaderAssist" class="mb-5 d-none"></div>
+          <div id="spaceHeader"  class="bg-white mt-3 p-3 ps-5 border rounded-5 fs-5 fw-semibold text-info text-capitalize">
+            <i class="fa-regular fa-paste mx-2"></i>All members posts</div>
+
+          <div class="border border-2 border-top-0 border-start-0 border-end-0 border-dark my-3"></div>
+
+          <section id="postsContainer" class="mx-4">
+            <!--  fill messages  -->
+          </section>
+
+        </article>
+
+       </div>
+    </div>
+</section>
+
+  
+
+
+
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/space.js"></script>
+</body>
+</html>

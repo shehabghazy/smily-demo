@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Smiley - Settings</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+</head>
+<body class="pt-2">
+  <nav class="fixed-top border-bottom border-1 border-info bg-white">
+    <div class="container-fluid">
+      <div class="row text-info">
+
+        <div class="col-5 text-center d-flex justify-content-center align-items-center">
+          <i class="fa-regular fa-face-laugh-wink fs-2"> <span class="fs-4 fw-semibold text-capitalize">Smiley Space</span></i>
+        </div>
+        <div class="col-1 d-flex justify-content-end align-items-center">
+        </div>
+        <div class="col-5 text-center d-flex justify-content-center align-items-center">
+          <input class="form-control mx-1 handle-input w-50" type="search" placeholder="Search">
+          <a href="space.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-end-0 border-0 "><i class="fa-solid mx-2 fa-comments"></i>Space</button></a><a href="profile.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-end-0 border-0 "><i class="fa-solid mx-2 fa-user"></i>Profile</button></a><a href="settings.html"><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-0"><i class="fa-solid mx-2 fa-gears"></i>Settings</button></a><a><button class="btn btn-outline-dark fw-s shadow-none py-2 px-0 rounded-0 border-0" id="logoutBtn">Log out</button></a>      
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section id="" class=" my-sm-3 my-lg-4">
+    <div class="container-lg ">
+      <div class="row d-flex justify-content-center">
+
+        <aside class="col-sm-10 col-lg-3 bg-white rounded-5 border mb-3 mt-5 ">
+          <div class="container-fluid p-0">
+              <div class="row">
+                
+                <div class="col-2 col-lg-4 d-flex justify-content-center mt-5 align-items-center">
+                  <img src="images/profile_pic.png" alt="" class="w-100">      
+                </div>
+                <div  class="col-8 d-flex justify-content-start mt-5 justify-content-lg-center align-items-center fs-5 fw-semibold text-center text-capitalize"><span id="profileUserName" class="border-bottom border-info border-2">user name</span></div>     
+
+                <div class="col-12  mt-lg-5 p-0">    
+                  <button id="updateAccSectionBtn" class="active btn btn-outline-info text-start ps-5 w-100 border-0 rounded-0"><i class="fa-solid fa-pen-to-square mx-2"></i>Update Account</button>
+                  <button id="changePasswordSectionBtn" class="btn btn-outline-info text-start ps-5 w-100 border-0 rounded-0"><i class="fa-solid fa-lock mx-2"></i>Change Password</button>
+                  <button id="deleteAccSectionBtn" class="btn btn-outline-info text-start ps-5 w-100 border-0 rounded-0"><i class="fa-solid fa-circle-minus mx-2"></i>Remove Account</button>
+                </div>
+
+                <div class="d-none border border-2 border-top-0 border-start-0 border-end-0 border-dark my-3"></div>
+                
+              </div>   
+          </div>
+        </aside>
+
+        <article class="col-sm-9 col-lg-7 px-4">
+          <div class="bg-white mt-5 p-3 ps-5 border rounded-5 fs-5 fw-semibold text-info"><i class="fa-solid fa-gears mx-2"></i>Settings</div>
+          <div class="border border-2 border-top-0 border-start-0 border-end-0 border-dark my-3"></div>
+
+          <section id="updateAccSection" class="bg-white p-3 ps-5 border rounded-5 text-center">
+            <div id="updateAccountPopup" class="bg-dark bg-opacity-75 position-absolute top-0 start-0 w-100 vh-100 d-flex justify-content-center align-items-center text-center d-none">
+              <div class="bg-white p-5 text-center rounded-5 w-50 d-flex justify-content-center">
+                <div class="w-50">
+                  <p class="m-1 text-secondary fw-semibold my-3">Enter your password to confirm the update</p>
+                  <input id="updateAccountConfirmationPass" class="form-control handle-input mx-auto my-2 py-2" type="password" placeholder="********" name="password">
+                  <div id="updateAcoountIncorrectPassAlert" class="p-0 m-0 alert text-danger d-none">
+                    Incorrect password
+                  </div>
+                  <button id="confirmUpdateBtn" class="btn btn-sm btn-outline-info my-2 disabled">Confirm Update</button>
+                  <button id="cancelUpdateBtn" class="btn btn-sm btn-outline-dark shadow-none my-2">Cancel</button>
+  
+                </div>
+              </div>
+
+            </div>
+
+            <div class="p-4">
+              <p class="mb-5 text-info fs-5">Fill in the fields that you want to update</p>
+              <div class="text-start mt-2">
+                <label for="userNameUpdateInput" class="form-label fw-semibold">User Name</label>
+                <input id="userNameUpdateInput" class="form-control handle-input mx-auto py-2" type="text" placeholder="First And Last Name">
+              </div>
+              <div class="text-start mt-2">
+                <label for="emailUpdateInput" class="form-label fw-semibold">Email Address</label>
+                <input id="emailUpdateInput" class="form-control handle-input mx-auto py-2" type="email" placeholder="info@examle.com">
+              </div>
+              <div class="text-start mt-2">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6 ps-0">
+                      <label for="ageUpdateInput" class="form-label fw-semibold d-block">Age</label>
+                      <input id="ageUpdateInput" class="form-control handle-input mx-auto py-2" type="number" placeholder="Enter Your Age" >   
+                    </div>
+                    <div class="col-6 pe-0">
+                      <label for="phoneUpdateInput" class="form-label fw-semibold d-block">Phone</label>
+                      <input id="phoneUpdateInput" class="form-control handle-input mx-auto py-2" type="text" placeholder="Ex: 010 123 456 78" maxlength="11">  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="updateAert" class="p-0 alert text-info my-3 d-none">
+                <i class="fa-solid fa-circle-check mx-2"></i>Your account has been updated
+              </div>    
+              <div class="mt-3">
+                <button id="updateBtn" class="btn btn-outline-info disabled px-5 py-2">Update</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="changePasswordSection" class="d-none bg-white p-3 ps-5 border rounded-5 text-center ">
+            <div class="p-4">
+              <p class="mb-5 text-info fs-5">Fill in the fields to change account password</p>
+
+              <label for="currentPassInput" class="text-start form-label fw-semibold d-block">Current Password</span></label>
+              <input id="currentPassInput" class="form-control handle-input mx-auto my-1 py-2" type="password" placeholder="********" minlength="9" maxlength="30">
+
+              <div class="text-start mt-2">
+                <label for="newPassInput" class="form-label fw-semibold d-block">New Password</span></label>
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col-6 ps-0">
+                      <input id="newPassInput" class="form-control handle-input mx-auto py-2" type="password" placeholder="**********" minlength="9" maxlength="30">
+                    </div>
+                    <div class="col-6 pe-0">
+                      <input id="newPassConfirmationInput" class="form-control handle-input mx-auto py-2" type="password" placeholder="New Password Confirmation" minlength="9" maxlength="30">
+    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="changePassAlert" class="p-0 alert text-info my-3 d-none"></div> 
+              <div class="mt-3">
+                <button id="changePassBtn" class="btn btn-outline-info disabled px-5 py-2">Change</button>
+              </div>
+            </div>
+          </section>
+
+          <section id="deleteAccSection" class="d-none bg-white p-3 ps-5 border rounded-5 text-center">
+            <div class="p-4">
+              <p class="mb-5 text-info fs-5">Note: When an account is removed, all posts and comments will be removed forever and cannot be recovered</p>
+
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-6">
+                    <label for="emailRemoveAccInput" class="text-start form-label fw-semibold d-block">Enter your Email</label>
+                    <input id="emailRemoveAccInput" class="form-control handle-input mx-auto py-2" type="email" placeholder="info@examle.com">
+                  </div>
+                  <div class="col-6">
+                    <label for="passRemoveAccInput" class="text-start form-label fw-semibold d-block">Enter your Password</span></label>
+                    <input id="passRemoveAccInput" class="form-control handle-input mx-auto my-1 py-2" type="password" placeholder="********" minlength="9" maxlength="30">
+                  </div>
+                </div>
+              </div>
+              
+              <div id="removeAccAlert" class="p-0 alert text-info my-3 d-none"></div> 
+              <div class="mt-3">
+                <button id="removeAccBtn" class="btn btn-outline-info disabled px-5 py-2">Remove Account</button>
+              </div>
+            </div>
+
+
+            
+          </section>
+        </article>
+
+       </div>
+    </div>
+</section>
+
+  
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/settings.js"></script>
+</body>
+</html>
